@@ -1,0 +1,16 @@
+###
+Album: rasdasd
+Artist: asdqef
+Year: 12312
+Genre/s: Eqwe, Qweq
+----------------------------------
+Album: sabaton
+Artist: asdas
+Year: 1231
+Genre/s: Kkf
+----------------------------------
+Album: qeqw
+Artist: eqweqw
+Year: 21
+Genre/s: Saba
+----------------------------------

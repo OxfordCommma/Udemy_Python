@@ -1,0 +1,39 @@
+Info
+
+- dir(datatype)
+- help(datatype.function) o help(function)
+
+Atajos para listas (pueden servir para tuplas):
+
+- element[] y element[:]---> para acceder al elemento desde su indice
+- sum()
+- len()
+- append()
+- clear()
+- index()
+- remove()
+
+Atajos para cadenas (algunas de listas funcionan):
+
+- capitalize()
+- title()
+- upper()
+- lower()
+- string.replace("Hi", "Bye")
+- count() ---> para contar cuantas veces hay una letra en una cadena
+
+Atajos para números:
+- round()
+
+
+Atajos para diccionarios:
+
+- values()
+- items()
+- keys()
+
+Cómo concatenar cadenas
+
+- str1 + str2
+- en una función: return f"{st1}str2"
+- Si están en una lista, usamos un join

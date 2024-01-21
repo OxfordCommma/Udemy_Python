@@ -1,0 +1,32 @@
+En VSC tenemos la opción de trabajar en un archivo .py y luego pasarlo al intérprete, o directamente llamar
+al intérprete "on demand" para que nos reciba las consultas en vivo.
+
+Para ello, debemos escribir en la terminal:
+
+PS C:\Users\ramir\OneDrive\Documentos\udemy_Python> py -3
+
+Eso activa el uso del Shell de Python:
+
+>>> item = 3
+>>> cost = 2
+>>> item * cost
+6
+
+Para volver a la terminal tradicional, debemos escribir:
+>>> exit()
+
+--------------------------------------------------------
+Es recomendado tener 2 terminales, uno que corra el archivo en cuestión y otro que use el Shell de pruebas
+para tenerlo a mano. Es recomendado tenerlos divididos con la opción "Dividir terminal".
+
+Es recomendado no tener más de 2 terminales.
+
+
+--------------------------------------------------------
+Funciones para ver más funciones:
+
+dir(str)
+help(str.upper)
+
+#Listado de funciones que se usan en muchos tipos de datos, no solo en uno.
+print(dir(__builtins__))
