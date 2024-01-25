@@ -1,5 +1,10 @@
 from datetime import datetime
 
+def leer_lista_list():
+    with open("favorite_albums_list.txt", "r") as my_file:
+        lineas = my_file.readlines()
+        return lineas
+
 print("Bienvenido a Favolist, biblioteca de tus álbumes preferidos")
 
 while True:
@@ -31,12 +36,22 @@ while True:
         
         genres_str = ", ".join(genres)
 
+        valoracion = input("Ingresa tu valoración: ")
+
+        if isinstance(int(leer_lista_list()[-2]), int): # no funciono
+            id = int(leer_lista_list()[-2]) + 1
+        else:
+            id = 0
+            
+
         with open("favorite_albums_list.txt", "a+") as my_file:
             my_file.write(f"\nÁlbum: {album_name}\n")
             my_file.write(f"Artista: {artist}\n")
             my_file.write(f"Año: {year}\n")
             my_file.write(f"Genero/s: {genres_str}\n")
+            my_file.write(f"Valoración: {valoracion}\n")
             my_file.write(f"Registrado en: {str(datetime.now())}\n")
+            my_file.write(f"{str(id)}")
             my_file.write("----------------------------------")
             
             
@@ -51,29 +66,25 @@ while True:
 
     elif election == 2:
         with open("favorite_albums_list.txt", "r") as my_file:
-            #my_file.seek(0) no lo veo necesario, funciona sin él
             content = my_file.read()
 
         print(content)
 
     elif election == 3:
 
-        with open("favorite_albums_list.txt", "r") as my_file:
-            lineas = my_file.readlines()
-
         album_a_borrar = input("Elija el álbum a borrar: ")
 
         contador = 0
         new_file = []
 
-        for linea in lineas:
+        for linea in leer_lista_list():
 
             if contador > 0:
                 contador -= 1
                 continue
 
             if album_a_borrar in linea:
-                contador = 5
+                contador = 6
 
             else:
                 new_file.append(linea)
@@ -82,6 +93,4 @@ while True:
             for linea in new_file:
                 my_file.write(linea)
 
-
-# Al registrar el album, también registrar la valoración del mismo
 # Añadir índices a cada entrada
