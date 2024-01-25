@@ -37,3 +37,10 @@ Cómo concatenar cadenas
 - str1 + str2
 - en una función: return f"{st1}str2"
 - Si están en una lista, usamos un join
+
+Para saber si una cadena esta dentro de otra:
+
+a = "hola"
+b = "hola como estas"
+
+if a in b:

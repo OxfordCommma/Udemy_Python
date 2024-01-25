@@ -1,16 +1,28 @@
-###
-Album: rasdasd
-Artist: asdqef
-Year: 12312
-Genre/s: Eqwe, Qweq
+
+Álbum: weqweeqe
+Artista: dfsfsd
+Año: 2323
+Genero/s: Ewfwef
 ----------------------------------
-Album: sabaton
-Artist: asdas
-Year: 1231
-Genre/s: Kkf
+
+Álbum: weqkeqw
+Artista: poekqwkeopq
+Año: dfsdkfopdskop
+Genero/s: Asdkopa
 ----------------------------------
-Album: qeqw
-Artist: eqweqw
-Year: 21
-Genre/s: Saba
+Álbum: rabia
+Artista: coca
+Año: 123123
+Genero/s: Pipo
+----------------------------------
+Álbum: robae
+Artista: eekke
+Año: saba12
+Genero/s: Sisi
+----------------------------------2024-01-25 02:01:16.333956
+Álbum: rbodo
+Artista: kaka
+Año: wew11
+Genero/s: Eqweq
+Registrado en : 2024-01-25 02:02:50.265807
 ----------------------------------
