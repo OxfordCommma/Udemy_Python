@@ -106,3 +106,5 @@ while True:
         with open("favorite_albums_list.txt", "w") as my_file:
             for linea in new_file:
                 my_file.write(linea)
+
+# https://blog.finxter.com/how-to-delete-a-line-from-a-file-in-python/ Para borrar una línea de texto
