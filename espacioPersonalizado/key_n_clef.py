@@ -20,8 +20,7 @@ def createTable():
         score integer,
         timestamp date
         )
-        """
-    )
+        """)
     conn.commit()
     conn.close()
 
@@ -117,6 +116,22 @@ def deleteAllRows():
     conn.commit()
     conn.close()
 
+def verificar_input(prompt):
+    input_usuario = input(prompt)
+    
+    while input_usuario.strip() == '':
+        print("¡Por favor, ingresa un valor válido!")
+        input_usuario = input(prompt)
+    
+    return input_usuario
+
+def verificar_input_int(prompt):
+    while True:
+        try:
+            input_usuario = int(input(prompt))
+            return input_usuario
+        except ValueError:
+            print("¡Por favor, ingresa un valor válido!")
 
 if __name__ == "__main__":
     
@@ -138,11 +153,11 @@ if __name__ == "__main__":
 
         elif election == 1:
 
-            album_name = input("Ingresa el nombre del álbum: ")
-            artist = input("Ingresa el nombre del artista: ")
-            genre = input("Ingresa el género: ")
-            year = int(input("Ingresa el año de lanzamiento: "))
-            score = int(input("Ingresa tu valoración: "))
+            album_name = verificar_input("Ingresa el nombre del álbum: ")
+            artist = verificar_input("Ingresa el nombre del artista: ")
+            genre = verificar_input("Ingresa el género: ")
+            year = verificar_input_int("Ingresa el año de lanzamiento: ")
+            score = verificar_input_int("Ingresa tu valoración: ")
             timestamp = date.today()
 
             insertRow(album_name, artist, genre, year, score, timestamp)
@@ -152,7 +167,7 @@ if __name__ == "__main__":
 
         elif election == 3:
             readRows()
-            album_to_delete = int(input("Ingrese el ID: "))
+            album_to_delete = verificar_input_int("Ingrese el ID: ")
             deleteRows(album_to_delete)
         
         elif election == 4:
@@ -162,15 +177,15 @@ if __name__ == "__main__":
 
             for i, j in getFields().items():
                 print(f"{i} - {j}")
-            select_field = int(input("Ingrese la columna a modificar: "))
+            select_field = verificar_input_int("Ingrese la columna a modificar: ")
 
             readRows()
-            select_id = int(input("Ingrese el id del album a modificar: "))
+            select_id = verificar_input_int("Ingrese el id del album a modificar: ")
 
             if select_field in [1, 5, 6]:
-                new_value = int(input("Ingrese el nuevo valor: "))
+                new_value = verificar_input_int("Ingrese el nuevo valor: ")
             
             else:
-                new_value = input("Ingrese el nuevo valor: ")
+                new_value = verificar_input("Ingrese el nuevo valor: ")
 
             modifyAlbum(select_field, new_value, select_id)
